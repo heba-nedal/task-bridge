@@ -9,7 +9,7 @@ import { errMsg } from "@/lib/plans";
 export const Route = createFileRoute("/auth")({
   ssr: false,
   validateSearch: (s: Record<string, unknown>): { mode?: "signup" } =>
-    s.mode === "signup" ? { mode: "signup" } : {},
+    s["mode"] === "signup" ? { mode: "signup" } : {},
   head: () => ({
     meta: [
       { title: "Sign in — TaskBridge" },
