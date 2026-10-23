@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Plan-task ownership is enforced by the composite foreign key `(plan_id, user_id) -> plans(id, user_id)`, not by application checks; keep that constraint so a task can never be attached to another user's plan.
